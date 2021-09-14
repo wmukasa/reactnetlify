@@ -18,34 +18,7 @@ const Home =() =>
         fetchData();
     },[]
     );
-    const getBlogsPictures =()=>{
-        let list =[];
-        let result = [];
-        blog.map(blogPost =>{
-            return list.push(
-                <div id="carouselExampleSlidesOnly" className="carousel slide" data-bs-ride="carousel">
-                <div className="carousel-inner">
-                    <div className="carousel-item active">
-                        <img className="d-block w-100" src={blogPost.thumbnail} alt='thumbnail'/>
-                    </div>
-                </div>
-            </div>
-            );
-        });
-        for(let i=0; i<list.length; i +=2){
-            result.push(
-                <div key={i} id="carouselExampleSlidesOnly" className="carousel slide" data-bs-ride="carousel">
-                    <div className="carousel-inner">
-                        {list[i]}
-                    </div>
-                    <div className="carousel-inner">
-                        {list[i+1]? list[i+1] :null}
-                    </div>
-                </div>
-            )
-        }
-        return result;
-    };
+ 
     return(
         <div className="container py-4">
             <div className="p-5 mb-4 bg-light rounded-3">
