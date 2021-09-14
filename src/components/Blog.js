@@ -37,7 +37,7 @@ const Blog =() =>{
             try{
                 const res = await axios.get(`${process.env.REACT_APP_API_URL}/api/wed/featured`);
                 setFeaturedBlog(res.data[0]);
-                console.log(res.data);
+                
             }
             catch(err){
             }
